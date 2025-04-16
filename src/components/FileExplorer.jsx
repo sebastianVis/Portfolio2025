@@ -141,7 +141,7 @@ const FileExplorer = () => {
   return (
     <div className="relative top-[10vh] flex flex-col md:flex-row h-[90vh] w-full overflow-hidden">
       {/* Sidebar */}
-      <aside className="w-full md:w-64 flex-shrink-0 bg-gray-100 dark:bg-[#332436] border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto">
+      <aside className="w-full md:w-64 flex-shrink-0 bg-gray-100 dark:bg-[#332436] border-b md:border-b-0 md:border-r dark:border-[#32CD32] p-4 overflow-y-auto">
         <ul className="space-y-2">
           {folders.map((folder) => (
             <li
@@ -170,7 +170,7 @@ const FileExplorer = () => {
       </main>
 
       {/* Preview Panel */}
-      <aside className="w-full md:w-80 flex-shrink-0 border-t md:border-t-0 md:border-l border-gray-300 dark:border-gray-600 p-4 bg-gray-50 dark:bg-[#332436] overflow-y-auto">
+      <aside className="w-full md:w-80 flex-shrink-0 border-t md:border-t-0 md:border-l border-[#32CD32] dark:border-[#32CD32] p-4 dark:bg-[#332436] overflow-y-auto">
         <h3 className="text-lg font-bold mb-4">Preview</h3>
         {selectedFile ? (
           <div className="flex flex-col items-center space-y-4">
