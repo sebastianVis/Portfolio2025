@@ -6,19 +6,19 @@ import cven from "../img/CVEN.png";
 import cvenFile from "../files/SebastianVisbalENCV.pdf";
 import cvesFile from "../files/SebastianVisbalESCV.pdf";
 import sena from "../img/SENA.png";
-import uts from "../img/uts.png"
-import campuslands from "../img/campuslands.png"
+import uts from "../img/uts.png";
+import campuslands from "../img/campuslands.png";
 
-import github from "../img/github.png"
-import linkedin from "../img/linkedin.png"
+import github from "../img/github.png";
+import linkedin from "../img/linkedin.png";
 
-import ligabetplay from "../img/ligabetplay.png"
-import f1simulator from "../img/f1simulation.png"
+import ligabetplay from "../img/ligabetplay.png";
+import f1simulator from "../img/f1simulation.png";
 
-import frontEnd from "../img/frontend.png"
-import backEnd from "../img/backend.png"
-import automation from "../img/automation.png"
-import database from "../img/database.png"
+import frontEnd from "../img/frontend.png";
+import backEnd from "../img/backend.png";
+import automation from "../img/automation.png";
+import database from "../img/database.png";
 
 const folders = [
   { name: "About_Me", icon: "🧑‍💻" },
@@ -63,7 +63,7 @@ const folderFiles = {
       icon: linkedin,
       description: "Visit my LinkedIn",
       url: "https://www.linkedin.com/in/sebasti%C3%A1n-alberto-visbal-s%C3%A1enz-395913286/",
-    }
+    },
   ],
   Academic: [
     {
@@ -83,30 +83,33 @@ const folderFiles = {
       type: "pdf",
       icon: campuslands,
       description: "Software Developing 2024 - CURRENTLY",
-    }
+    },
   ],
-  Projects:[
+  Projects: [
     {
       name: "LigaBetPlay.py",
       type: "link",
       icon: ligabetplay,
-      description: "Project developed with Python and JSON, creating the structure of a league where the organizer can create entire teams, an saving all the information that they must need at a tournament",
+      description:
+        "Project developed with Python and JSON, creating the structure of a league where the organizer can create entire teams, an saving all the information that they must need at a tournament",
       url: "https://github.com/sebastianVis/TallerPythonLigaDic",
     },
     {
       name: "f1Simulator.js",
       type: "link",
       icon: f1simulator,
-      description: "Project developed with JavaScript Vanila, where the user can develop, Teams, pilots, circuis and cars. Then, the player can select them and play them in the circuits.",
-      url: "https://github.com/sebastianVis/f1Simulator"
-    }
+      description:
+        "Project developed with JavaScript Vanila, where the user can develop, Teams, pilots, circuis and cars. Then, the player can select them and play them in the circuits.",
+      url: "https://github.com/sebastianVis/f1Simulator",
+    },
   ],
   Skills: [
     {
       name: "Front-end.js",
       type: "skill",
       icon: frontEnd,
-      description: "I have habilities working with JavaScript, HTML, CSS (also TailwindCSS) and React",
+      description:
+        "I have habilities working with JavaScript, HTML, CSS (also TailwindCSS) and React",
     },
     {
       name: "Back-end.py",
@@ -124,10 +127,10 @@ const folderFiles = {
       name: "Automation",
       type: "skill",
       icon: automation,
-      description: "I have habilities working with Arduino, Python, PLC Siemens languages as LADDER, GRAFCET and FLOWCHART",
-    }
-  ]
-
+      description:
+        "I have habilities working with Arduino, Python, PLC Siemens languages as LADDER, GRAFCET and FLOWCHART",
+    },
+  ],
 };
 
 const FileExplorer = () => {
@@ -136,6 +139,10 @@ const FileExplorer = () => {
 
   const handleFileClick = (file) => {
     setSelectedFile(file);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedFile(null); // Cierra el modal
   };
 
   return (
@@ -170,8 +177,18 @@ const FileExplorer = () => {
       </main>
 
       {/* Preview Panel */}
+
       <aside className="w-full md:w-80 flex-shrink-0 border-t md:border-t-0 md:border-l border-[#32CD32] dark:border-[#32CD32] p-4 dark:bg-[#332436] overflow-y-auto">
-        <h3 className="text-lg font-bold mb-4">Preview</h3>
+        <div className="flex justify-between flex-row w-full">
+          <h3 className="text-lg font-bold mb-4">Preview</h3>
+          <button
+            onClick={handleCloseModal}
+            className="mb-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-white hover:text-black"
+          >
+            x
+          </button>
+        </div>
+
         {selectedFile ? (
           <div className="flex flex-col items-center space-y-4">
             <img
@@ -207,7 +224,7 @@ const FileExplorer = () => {
           </div>
         ) : (
           <p className="text-gray-500 dark:text-gray-400 text-sm">
-            Selecciona un archivo para ver su contenido.
+            Select a file to visualize its content.
           </p>
         )}
       </aside>
