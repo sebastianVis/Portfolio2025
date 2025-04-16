@@ -15,8 +15,8 @@ import linkedin from "../img/linkedin.png"
 import ligabetplay from "../img/ligabetplay.png"
 import f1simulator from "../img/f1simulation.png"
 
-import frontEnd from "../img/frontEnd.png"
-import backEnd from "../img/backEnd.png"
+import frontEnd from "../img/frontend.png"
+import backEnd from "../img/backend.png"
 import automation from "../img/automation.png"
 import database from "../img/database.png"
 
