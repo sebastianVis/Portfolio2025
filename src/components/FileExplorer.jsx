@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import FolderView from "./FolderView";
 import cara from "../img/cara2.png";
-import cves from "../img/cves.png";
-import cven from "../img/cven.png";
+import cves from "../img/CVES.png";
+import cven from "../img/CVEN.png";
 import cvenFile from "../files/SebastianVisbalENCV.pdf";
 import cvesFile from "../files/SebastianVisbalESCV.pdf";
 import sena from "../img/SENA.png";
